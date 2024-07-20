@@ -17,6 +17,8 @@ if(currentScore>0){
         msg.textContent='Congrats! you win the game!';
         msg.style.color='green';
         msg.style.fontSize='44px';
+        userInput.style.display = "none";
+        checkbtn.style.display = "none";
     if (currentScore>historyHighScore){
         historyHighScore=currentScore
         }
