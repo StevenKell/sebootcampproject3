@@ -24,22 +24,29 @@ if(currentScore>0){
         }
     }
     else{
-
+       
         if(Number(userInput.value)>rondomNum){
             msg.textContent='Wrong number! too high! try smaller value';
-            msg.style.color='red';
+            msg.style.color='yellow';
             msg.style.fontSize='34px';
             currentScore=currentScore-1;
             currntScore.textContent=String(currentScore);    
         }
         if(Number(userInput.value)<rondomNum){
             msg.textContent='Wrong number! too low! try a larger value';
-            msg.style.color='red';
+            msg.style.color='yellow';
             msg.style.fontSize='34px';
             currentScore=currentScore-1;
             currntScore.textContent=String(currentScore);
+        }
+        if(currentScore===0){
+            msg.textContent='You lose! Play again!';
+            msg.style.color='red';
+            msg.style.fontSize='34px';
+            userInput.style.display = "none";
+            checkbtn.style.display = "none";
 
-            
+            console.log("lose condition fired");
         }
     }
 
