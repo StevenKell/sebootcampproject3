@@ -13,11 +13,11 @@ body{
 #subheader-text{
     font-size: x-large;
 }
-.container{
-    background-color: rgb(217, 233, 202);
 
-    border-radius: 25px;
-}
+
 .crrtscore{
     text-align: left;
+}
+#scoreboard{
+    font-size: small;
 }
