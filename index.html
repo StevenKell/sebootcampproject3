@@ -15,17 +15,17 @@
     </header>
 
 <main>
-    <div class="container bg-light col-md-6 border rounded-3">
+    <div id="outerblock" class="container col-md-6 border rounded-3">
         <div class="container text-center">
             <div class="row align-items-start">
-              <div class="col col-md-5 p-2 badge text-bg-primary">
-               <p id="scoreboard"> Current Score: <span class="crrntscore">10</span><br>
+              <div class="col col-md-5 p-2 badge shadow text-bg-primary">
+               <p id="scoreboard"> Current Score: <span class="crrntscore pt-3">10</span><br>
                 History High Score: <span class="highscore">0</span></p>
               </div>
               <div class="col">
               </div>
               <div class="col p-2">
-                <button type="button" class="resetbtn btn btn-success">reset</button></p>
+                <button type="button" class="resetbtn shadow btn btn-success">reset</button></p>
               </div>
             </div>
           </div>
@@ -33,15 +33,16 @@
         
         
         <div class="container ">
-            <div class="container bg-dark col-lg-5 border rounded-3 p-2">
+            <div id="innerblock" class="container shadow  col-lg-5 rounded-3 pt-3 pb-2 p-1">
+                <img class="border border-primary rounded shadow" id="questionmark" src="images/894-8949235_noun-project-question-mark-bubble-icon-1328413-cc.png" alt="">
         <input type="text" id="inputguess" name="inputguess" required minlength="4" maxlength="8" size="10"/>
         <div class="p-2">
-        <button type="button" class="checkbtn btn btn-success">check</button>
-        </div><p>Guess a number</p></div>
+        <button type="button" class="checkbtn shadow btn btn-info">check</button>
+        </div><p class="statusText">Guess a number</p></div>
         <br><br>
         </div>
-        <div class="container">
-            <!--Print contents of guess history array-->
+        <div class="container col-sm-5 bg-warning rounded-3">
+            <p></p><!--Print contents of guess history array-->
 
         </div>
     

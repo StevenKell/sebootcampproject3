@@ -21,3 +21,16 @@ body{
 #scoreboard{
     font-size: small;
 }
+#questionmark{
+    display: block;
+    position: relative;
+    width: 50%;
+    height: auto;
+left: 25%;
+}
+#outerblock{
+    background-color: rgb(235, 195, 18);
+}
+#innerblock{
+    background-color: rgb(212, 48, 149);
+}
