@@ -3,8 +3,7 @@ console.log(rondomNum);
 
 let currentScore=10;
 let historyHighScore=0;
-const guesshistory = [];
-
+let guesshistory = [];
 let checkbtn=document.querySelector('.checkbtn')
 let reset=document.querySelector('.resetbtn');
 let msg=document.querySelector('p.statusText')
@@ -26,7 +25,8 @@ msg.textContent='Guess a number';
         document.getElementById("questionmark").src = "images/894-8949235_noun-project-question-mark-bubble-icon-1328413-cc.png";
         userInput.style.display = "inline";
         checkbtn.style.display = "inline";
-        userInput.value = '';
+        guesshistory = [];
+        
 }
 )
 
@@ -34,8 +34,8 @@ msg.textContent='Guess a number';
 checkbtn.addEventListener('click',function()
 {
 
-    guesshistory.push(userInput); 
-            console.log(guesshistory);
+    guesshistory.push(userInput.value); 
+    console.log(guesshistory);
 if(currentScore>0){
     if(Number(userInput.value)===rondomNum){
         msg.textContent='Congrats! you win the game!';
@@ -58,7 +58,8 @@ if(currentScore>0){
             currentScore=currentScore-1;
             currntScore.textContent=String(currentScore);
             guesscompare = userInput;
-               
+            guesshistory.push(userInput.value);
+            console.log(guesshistory)
         }
         if(Number(userInput.value)<rondomNum){
             msg.textContent='Wrong number! too low! try a larger value';
